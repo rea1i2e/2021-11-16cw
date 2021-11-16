@@ -29,7 +29,7 @@
 .header__nav {
   background-color: #201917E5;
   height: 100vh;
-  margin-top: rem(100);
+  padding-top: rem(100);
   position: fixed;
   top: 0;
   left: 0;
@@ -41,7 +41,7 @@
   @include mq("md") {
     background-color: transparent;
     height: inherit;
-    margin-top: 0;
+    padding-top: 0;
     position: inherit;
     transform: translateX(0);
     width: auto;

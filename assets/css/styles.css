@@ -225,8 +225,8 @@ select::-ms-expand {
 .header__nav {
   background-color: rgba(32, 25, 23, 0.89804);
   height: 100vh;
-  margin-top: 100px;
-  margin-top: 6.25rem;
+  padding-top: 100px;
+  padding-top: 6.25rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -245,7 +245,7 @@ select::-ms-expand {
   .header__nav {
     background-color: transparent;
     height: inherit;
-    margin-top: 0;
+    padding-top: 0;
     position: inherit;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -517,4 +517,9 @@ select::-ms-expand {
 body {
   font-size: 16px;
   font-size: 1rem;
+}
+
+.space {
+  height: 500px;
+  height: 31.25rem;
 }
