@@ -30,7 +30,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-drawer-open").toggleClass("open");
     $(".drawer-menu").toggleClass("open");
     $("html").toggleClass("is-fixed");
-
   });
 
 
@@ -46,5 +45,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $('html,body').animate({ scrollTop: targetY }, time, 'swing');
     return false;
   });
+
+    // ハンバーガー
+    $('.js-hamburger-btn').on('click', function () {        // js-btnクラスをクリックすると、
+      $('.header__nav , .header__btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+    })
+    $('.header__nav-link').on('click', function () {        // drawermenu内のリンクをクリックすると、、
+      $('.header__nav , .header__btn-line').removeClass('open'); // メニューとバーガーの線のopenクラスを外す
+    })
+  
+  
 
 });

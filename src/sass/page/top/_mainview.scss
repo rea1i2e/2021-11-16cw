@@ -1,0 +1,49 @@
+.mainview {
+  // background: yellow;
+  position: relative;
+  width: 100%;
+  z-index: $layer1-mainveiw-base;
+}
+
+.mainview::before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+  @include mq("md") {
+    padding-top: calc( 100% * 650 / 1440 ); /* 高さを幅の75%に固定 */
+  }
+}
+
+.mainview__image {
+  background-image: url(../images/top/mainview.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.mainview__copy {
+  background-color: #762A1080;
+  color: #fff;
+  font-family: $second-font-family;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY( -50%);
+  width: calc( 100% - 32px );
+  z-index: $layer1-mainveiw-title;
+  @include mq("md") {
+      font-size: rem(36);
+      line-height: calc( 63 / 36);
+      width: calc( 100% * 1080 / 1440);
+      padding: rem(49) rem(84);
+    }
+}
+
